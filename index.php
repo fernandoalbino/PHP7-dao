@@ -17,14 +17,39 @@ require_once("config.php");
 // $lista = Usuario::getList();
 // echo json_encode($lista);
 
-//Carrega uma lista de usuários buscando pelo login
+// Carrega uma lista de usuários buscando pelo login
 // $search = Usuario::search("jo");
 // echo json_encode($search);
 
-//Carrega usuário usando login e a senha 
+// Carrega usuário usando login e a senha 
+// $usuario = new Usuario();
+// $usuario->login("fernando", "fa13sa11");
+
+// echo $usuario;
+
+//Insere Ususario metodo 1
+// $aluno = new Usuario();
+// $aluno->setDeslogin("joao");
+// $aluno->setDessenha("123456");
+
+//metodo 2
+// $aluno = new Usuario("aluno", "@lun0");
+// $aluno->insert();
+// echo $aluno;
+
+// $usuario = new Usuario();
+
+// $usuario->loadById(9);
+// $usuario->update("julio", "123456");
+
+// echo $usuario;
+
 $usuario = new Usuario();
-$usuario->login("fernando", "fa13sa11");
+
+$usuario->loadById(7);
+$usuario->delete();
 
 echo $usuario;
+
 
 ?>
